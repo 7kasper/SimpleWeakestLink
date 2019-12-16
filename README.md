@@ -9,7 +9,7 @@ Now the gamemaster can keep score like in the real WeakestLink using a few keybo
 `v` - Question right, show the value of the next question.  
 `c` - Question wrong, reset the current question.  
 `f` - Back, goto the value of the previous question (for if you were triggerhappy)  
-`b` - Bank. If player shouts bank, the value of the last answered 
+`b` - Bank. If player shouts bank, the value of the last answered  
 `p` - Tripple Bank. For the second last round. Question value is multiplied by three before it is banked.   
 `page reload` - resets the bank :wink:
 
