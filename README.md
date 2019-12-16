@@ -1,5 +1,5 @@
 # SimpleWeakestLink
-**Simple weakest link page written in 20 min to keep score in the weakest link gameshow at our local Scouts group.**
+**Simple weakest link page written last minute to keep score in the weakest link gameshow at our local Scouts group.**
 
 ## Usage
 Goto https://7kasper.github.io/SimpleWeakestLink/.
