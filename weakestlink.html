@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+body {
+	height: 100%;
+	background-color: #031fa9;
+}
+body {
+	font-family: "Comic Sans MS";
+	font-weight: bold;
+	font-size: 165px;
+	color: white;
+	text-shadow:4px 4px black;
+}
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+
+let moneys = [0, 100, 250, 500, 1000, 1500, 2250, 3000, 4000, 5000, "BANK"];
+let bank = 0;
+let i = 0;
+
+$( document ).ready(function() {
+$("#video").hide();
+document.onkeypress = function(e) {
+	e = e || window.event;
+	var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+	switch(String.fromCharCode(charCode)) {
+		case "c": {
+			i = 0;
+			break;
+		}
+		case "v": {
+			if (i< (moneys.length - 2)) i++;
+			break;
+		}
+		case "f": {
+			if (i>0) i--;
+			break;
+		}
+		case "b": {
+			bank += moneys[i];
+			i = 0;
+			break;
+		}
+		case "p": {
+			bank += moneys[i] * 3;
+			i = 0;
+			break;
+		}
+		case "q": {
+			$("#thing").hide();
+			$("#video").show();
+			$("#video").get(0).play();
+			break;
+		}
+		case "w": {
+			$("#thing").show();
+			$("#video").get(0).pause();
+			$("#video").get(0).currentTime = 0;
+			$("#video").hide();
+			break;
+		}
+	}
+	$('#huidig').html(moneys[i+1]);
+	$('#bank').html(bank);
+	}
+});
+</script>
+
+
+</head>
+
+<body>
+<div id="thing">
+<small><i><span style="color:RED;text-shadow:4px 4px darkred;">The Weakest Link</span></i></small><br/>
+Volgende: &#8372;<span id="huidig">100</span><br/>
+Bank: &#8372;<span id="bank">0</span>
+</div>
+<center><video id="video" height="700" controls="controls" preload="auto" onclick="this.play()">
+ <source type="video/mp4" src="weakestlink.mp4">
+</video></center>
+
+</body>
+</html>
