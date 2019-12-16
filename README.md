@@ -2,7 +2,8 @@
 **Simple weakest link page written in 20 min to keep score in the weakest link gameshow at our local Scouts group.**
 
 ## Usage
-Load the html on your computer, or goto LINK The video file must be in the same directory to play properly.
+Goto https://7kasper.github.io/SimpleWeakestLink/.
+Or load the html on your computer, the video file must be in the same directory to play properly.
 Now the gamemaster can keep score like in the real WeakestLink using a few keyboard presses.
 
 `v` - Question right, show the value of the next question.  
